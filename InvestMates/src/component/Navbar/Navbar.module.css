@@ -1,0 +1,166 @@
+.RoutingContainer{
+    display: flex;
+}
+.sidebar {
+    min-width: 15em;
+    height: 100vh;
+    -webkit-box-orient :vertical;
+    -webkit-box-direction:normal;
+    flex-direction: column;
+    -webkit-box-pack:justify ;
+    justify-content: space-between;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    -webkit-box-flex: 0;
+    flex: 0;
+    border-radius: 0.8em;
+    background-color: #131313;
+    color: #eeedf2;
+    padding: 1.3em;
+    overflow: hidden;
+    line-height: 1.4;
+    font-weight: 400;
+    font-family:  "Days One", sans-serif;
+}
+.sidebarHeader {
+    display: flex;
+    width: 100%;
+    -webkit-box-pack:justify ;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    
+}
+
+.logoText{
+    overflow: hidden;
+    width: 100%;
+    -webkit-box-flex: 0;
+    font-size: 1em;
+    
+}
+
+.toggleBtn{
+    position: relative;
+    z-index: 4;
+    display: flex;
+    width: 3em;
+    height: 3em;
+    -webkit-box-align: center;
+    justify-content: center;
+    -webkit-box-pack: center;
+    border-radius: 0.5em;
+    background-color: #131313;
+    transition: background-color 200ms ease-in-out;
+    padding-top: .4em;
+}
+
+.navicon{
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    object-fit: contain;
+}
+
+.sidebardivider {
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+    margin: 0;
+  }
+
+.sidebarNav{
+    color:rgba(238, 237, 242, 0.5);
+    padding-top: 1.7em;
+    padding-bottom: 3.5em;
+}
+
+.navItem {
+    display: flex;
+    width: 100%;
+    margin-bottom: 0.4em;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 0.5em;
+    padding: 10px;
+    color: gray;
+    text-decoration: none;
+    transition: background-color 200ms ease-in-out;
+}
+
+.navItem:hover {
+    background-color: #5c31ff;
+    color: #eeedf2;
+}
+
+.icons{
+    position: relative;
+    z-index: 4;
+    display: flex;
+    width: 1.2em;
+    height: 1.2em;    
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    border-radius: 0.5em;
+    object-fit: contain;
+}
+
+.navItem span {
+    -webkit-box-flex: 0;
+    margin-bottom: 0px;
+    font-family: Poppins, sans-serif;
+    font-size: 0.8em;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.07em;
+}
+
+.active {
+    background-color: #5c31ff;
+    color: #eeedf2;
+}
+
+.navItem svg {
+    margin-right: 20px;
+    margin-left: 5px;
+    transition: background-color 200ms ease-in-out;
+
+}
+
+.collapsed .navItem {
+    justify-content: center;
+}
+
+.collapsed .navItem svg {
+   margin-right: 0px;
+   margin-left: 0px;
+
+}
+
+.collapsed .navItem span {
+    opacity: 0;
+    width: 0;
+}
+
+.collapsed .toggleBtn {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+
+.collapsed {
+    max-width: 5.6em;
+    min-width: 5.6em;
+}
+
+
+.collapsed .logoText {
+    opacity: 0;
+    width: 0;
+}
