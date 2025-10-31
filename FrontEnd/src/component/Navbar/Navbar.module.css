@@ -1,13 +1,23 @@
 .RoutingContainer{
     display: flex;
+    max-width: 100%;
+    min-height: 100vh;
+    width: 100%;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: stretch;
+    padding: 1em;
+    box-sizing: border-box; 
+    align-items: stretch;
 }
+
 .sidebar {
     min-width: 15em;
-    height: 100vh;
-    -webkit-box-orient :vertical;
-    -webkit-box-direction:normal;
+    min-height: calc(100vh - 2em);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     flex-direction: column;
-    -webkit-box-pack:justify ;
+    -webkit-box-pack: justify;
     justify-content: space-between;
     -webkit-box-align: stretch;
     align-items: stretch;
@@ -20,16 +30,19 @@
     overflow: hidden;
     line-height: 1.4;
     font-weight: 400;
-    font-family:  "Days One", sans-serif;
+    font-family: "Days One", sans-serif;
+    transition: all 0.3s ease;
+    display: flex;
 }
 .sidebarHeader {
     display: flex;
     width: 100%;
-    -webkit-box-pack:justify ;
+    -webkit-box-pack: justify;
     justify-content: space-between;
     -webkit-box-align: center;
     align-items: center;
-    
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
 }
 
 .logoText{
@@ -37,7 +50,7 @@
     width: 100%;
     -webkit-box-flex: 0;
     font-size: 1em;
-    
+    transition: opacity 0.3s ease, width 0.3s ease;
 }
 
 .toggleBtn{
@@ -51,7 +64,7 @@
     -webkit-box-pack: center;
     border-radius: 0.5em;
     background-color: #131313;
-    transition: background-color 200ms ease-in-out;
+    transition: all 0.3s ease;
     padding-top: .4em;
 }
 
@@ -69,12 +82,20 @@
     height: 1px;
     background-color: #ccc;
     margin: 0;
-  }
+}
 
 .sidebarNav{
-    color:rgba(238, 237, 242, 0.5);
-    padding-top: 1.7em;
-    padding-bottom: 3.5em;
+    color: rgba(238, 237, 242, 0.5);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.sidebarFooter {
+    margin-top: auto;
+    padding-top: 1em;
+    display: flex;
 }
 
 .navItem {
@@ -89,12 +110,25 @@
     padding: 10px;
     color: gray;
     text-decoration: none;
-    transition: background-color 200ms ease-in-out;
+    transition: all 0.3s ease;
 }
 
 .navItem:hover {
     background-color: #5c31ff;
     color: #eeedf2;
+}
+
+.footericons{
+    position: relative;
+    z-index: 4;
+    display: flex;
+    width: 2em;
+    height: 2em;    
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    border-radius: 0.5em;
+    object-fit: contain;
 }
 
 .icons{
@@ -118,6 +152,9 @@
     line-height: 1.5;
     font-weight: 400;
     letter-spacing: 0.07em;
+    transition: opacity 0.3s ease, width 0.3s ease;
+    white-space: nowrap; 
+    overflow: hidden; 
 }
 
 .active {
@@ -128,8 +165,8 @@
 .navItem svg {
     margin-right: 20px;
     margin-left: 5px;
-    transition: background-color 200ms ease-in-out;
-
+    transition: all 0.3s ease;
+    flex-shrink: 0;
 }
 
 .collapsed .navItem {
@@ -139,12 +176,12 @@
 .collapsed .navItem svg {
    margin-right: 0px;
    margin-left: 0px;
-
 }
 
 .collapsed .navItem span {
     opacity: 0;
     width: 0;
+    
 }
 
 .collapsed .toggleBtn {
@@ -152,13 +189,10 @@
     margin-right: 0;
 }
 
-
-
 .collapsed {
-    max-width: 5.6em;
+    width: 5.6em;
     min-width: 5.6em;
 }
-
 
 .collapsed .logoText {
     opacity: 0;

@@ -3,7 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import NavbarRouting from './component/Navbar/NavbarRouting'
-import 'bootstrap/dist/js/bootstrap.bundle.min'; // Import Bootstrap JS (includes Popper)
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 function App() {
@@ -17,3 +18,5 @@ function App() {
 }
 
 export default App
+
+

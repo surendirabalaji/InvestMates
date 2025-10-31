@@ -1,0 +1,14 @@
+.stocklist-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .2rem;
+    padding-bottom:1.3rem ;
+}
+
+.stocklist-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex:1;
+}

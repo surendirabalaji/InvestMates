@@ -1,0 +1,120 @@
+.transactions-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-inline: 2rem;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    font-size: 0.8rem;
+}
+
+.table-responsive,
+.navbar {
+    width: 100%;
+    max-width: 100;
+}
+
+.table-responsive {
+    margin: 25px auto;
+    overflow-y: auto;
+
+}
+
+.table {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.transactions-header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: .2rem;
+    padding-bottom:1rem ;
+    font-size: 1rem;
+}
+.buy-btn {
+    color:#000000;
+    background-color: #D2FBD0;
+    border: none;
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 0.6rem;
+
+}
+
+.sell-btn {
+    color: #000000;
+    background-color: #FC979C;
+    border: none;
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 0.6rem;
+}
+
+@media (max-width: 768px) {
+    .table-responsive {
+        max-width: 100%;
+    }
+
+    .transactions-table-container th,
+    .transactions-table-container td {
+        padding: 10px;
+        
+    }
+    .entries-dropdown .dropdown-menu {
+        width: 100%; 
+    }
+}
+
+tr,
+td {
+    text-align: center;
+}
+
+
+.entries-dropdown .dropdown-menu {
+    width: auto;
+    min-width: 50px;
+    padding: 5px 10px;
+}
+
+.button {
+    color: #5c31ff;
+    border-color: #5c31ff;
+    background-color: transparent;
+    padding-block: 0.4rem;
+    padding-inline: 0.6rem;
+    border-radius: 0.5rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.button:hover {
+    color: #fff;
+    background-color: #5c31ff;
+    border-color: #5c31ff;
+}
+
+.button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.5);
+}
+
+.button:active {
+    color: #fff;
+    background-color: #5c31ff;
+    border-color: #5c31ff;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.button:disabled {
+    color: #5c31ff;
+    background-color: transparent;
+    border-color: #5c31ff;
+}
